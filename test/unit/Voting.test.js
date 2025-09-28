@@ -284,8 +284,8 @@ describe("Voting Tests", function(){
           await voting.connect(voter1).addProposal("Proposition 2");
           await voting.endProposalsRegistering();
           await voting.startVotingSession();
-          await voting.connect(voter1).setVote(1); // vote pour Proposition 2
-          await voting.connect(voter2).setVote(1); // vote pour Proposition 2
+          await voting.connect(voter1).setVote(1); // vote pour Proposition 1
+          await voting.connect(voter2).setVote(1); // vote pour Proposition 1
           await voting.endVotingSession();
           ///
           await expect(voting.connect(owner).tallyVotes())
