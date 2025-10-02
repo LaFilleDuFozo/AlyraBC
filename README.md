@@ -23,14 +23,13 @@ L'objectif des tests unitaires est de **vérifier la conformité du contrat** av
 - Un utilisateur non "owner" ne peut pas ajouter de votant (vérification via le contrat OpenZeppelin `Ownable`).  
 - Un votant déjà enregistré ne peut pas être ajouté à nouveau.  
 - Vérification de l’événement `VoterRegistered`.  
-- Vérification de l’accès restreint aux fonctions protégées par le `modifier onlyVoters`.
 
 ---
 
 ### 2. **Enregistrement des propositions**
 - Un votant peut enregistrer une proposition lorsque l’état est `ProposalsRegistrationStarted`.  
 - Vérification de l’ajout automatique de la proposition **GENESIS** lors du démarrage.  
-- Vérification de l’événement `ProposalRegistered`.  
+- Vérification de l’événement `ProposalRegistered`. 
 - Rejet si :  
   - la description est vide,  
   - l’utilisateur n’est pas un votant,  
